@@ -7,6 +7,8 @@ public class Player1 : MonoBehaviour
     public float moveSpeed = 3;
     private Vector3 bulletEulerAngles;
     private float timeVal = 0;
+    public int x;
+    public int y;
 
     public Sprite[] tankSprite;
     public bool changeSprite;
@@ -36,6 +38,8 @@ public class Player1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        x = Mathf.RoundToInt((transform.position.x + 8.8f) / 1.51f);
+        y = Mathf.RoundToInt((transform.position.y - 8.92f) / (-1.51f));
         if (PlayerManager.Instance.isDefended)
         {
             shieldPrefab.SetActive(true);

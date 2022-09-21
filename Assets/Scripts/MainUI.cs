@@ -19,7 +19,7 @@ public class MainUI : MonoBehaviour
         playerText.text = score == 0 ? "00" : score.ToString();
         recordText.text = PlayerParameter.record.ToString();
         PlayerParameter.playerScore = 0;
-
+        PlayerParameter.chooseLevel = true;
     }
 
     // Update is called once per frame

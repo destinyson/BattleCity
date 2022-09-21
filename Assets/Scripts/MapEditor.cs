@@ -14,6 +14,8 @@ public class MapEditor : MonoBehaviour
 
     public float enemyBornTimeVal = 0;
 
+    public GameObject[] level_map;
+
     private void Awake()
     {
         InitMap(PlayerParameter.level);
@@ -113,22 +115,7 @@ public class MapEditor : MonoBehaviour
 
     private void InitMap(int level)
     {
-        for (int i = 0; i < 13; ++i)
-        {
-            for (int j = 0; j < 13; ++j)
-            {
-                if (PlayerParameter.map[level - 1, i, j] != 8)
-                {
-                    if ((i == 12 && (j == 5 || j == 7)) || (i == 11 && j >= 5 && j <= 7))
-                    {
-                        GameObject wall = Instantiate(item[PlayerParameter.map[level - 1, i, j]], new Vector3(1.51f * j - 8.8f, -1.51f * i + 8.92f, 0), Quaternion.identity);
-                        wallList.Add(wall);
-                    }
-                    else
-                        CreateItem(item[PlayerParameter.map[level - 1, i, j]], new Vector3(1.51f * j - 8.8f, -1.51f * i + 8.92f, 0), Quaternion.identity);
-                }
-            }
-        }
+        Instantiate(level_map[level - 1], new Vector3(0, 0, 0), Quaternion.identity);
         // ¿ÕÆøÇ½
         for (int i = -1; i <=
             13; ++i)
@@ -159,9 +146,29 @@ public class MapEditor : MonoBehaviour
     
     private void CreateEnemy()
     {
-        Vector3 EnemyPos = new Vector3(-9.06f * Random.Range(0, 3) + 9.32f, 8.92f, 0);
-        CreateItem(item[3], EnemyPos, Quaternion.identity);
-        ++PlayerManager.Instance.enemyBornNum;
+        List<int> bornPos = new List<int>();
+        for (int i = 0; i < 3; ++i)
+        {
+            bool haveEnemy = false;
+            for (int j = 0; j < PlayerManager.Instance.enemyAlive.Count; ++j)
+            {
+                if (PlayerManager.Instance.enemyAlive[j].GetComponent<Enemy>().x == 6 * i && PlayerManager.Instance.enemyAlive[j].GetComponent<Enemy>().y == 0)
+                {
+                    haveEnemy = true;
+                    break;
+                }
+            }
+            if (PlayerManager.Instance.player.GetComponent<Player1>().x == 6 * i && PlayerManager.Instance.player.GetComponent<Player1>().y == 0)
+                haveEnemy = true;
+            if (!haveEnemy)
+                bornPos.Add(i);
+        }
+        if (bornPos.Count > 0)
+        {
+            Vector3 EnemyPos = new Vector3(9.06f * bornPos[Random.Range(0, bornPos.Count)] - 8.8f, 8.92f, 0);
+            CreateItem(item[3], EnemyPos, Quaternion.identity);
+            ++PlayerManager.Instance.enemyBornNum;
+        }
     }
     
     private void hideScore()

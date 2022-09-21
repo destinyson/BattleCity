@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1105894867246549181}
   - component: {fileID: 3678682410781917028}
-  - component: {fileID: 7522770677677358622}
   - component: {fileID: 6368627049788315406}
   - component: {fileID: 7638957319542881416}
-  - component: {fileID: 1690314875887386062}
   - component: {fileID: -8585129759213609737}
+  - component: {fileID: 7057753704166852358}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Enemy
@@ -89,27 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7522770677677358622
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2637642326658438087}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &6368627049788315406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,7 +130,9 @@ MonoBehaviour:
   isBonus: 0
   isHeavy: 1
   hitCount: 0
-  bulletPrefab: {fileID: 260553407898361683, guid: d0a16bec2e56f634e86772e91101dc4c, type: 3}
+  x: 0
+  y: 0
+  bulletPrefab: {fileID: 5643844831142279276, guid: d0a16bec2e56f634e86772e91101dc4c, type: 3}
   explodePrefab: {fileID: 5426620290605444033, guid: 7b6b63480b7815842bb101c0df3067bb, type: 3}
   heavyAudio: {fileID: -8585129759213609737}
   tankSprite:
@@ -191,26 +171,6 @@ MonoBehaviour:
   changeSprite: 0
   changeSpriteTimeVal: 0
   score: 400
---- !u!95 &1690314875887386062
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2637642326658438087}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e2b554acf744ea43b1fa5e3b41db6b3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &-8585129759213609737
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307,3 +267,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &7057753704166852358
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2637642326658438087}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

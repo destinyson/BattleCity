@@ -231,6 +231,7 @@ MonoBehaviour:
   enemy: 20
   isDead: 0
   enemyBornNum: 0
+  player: {fileID: 0}
   enemyAlive: []
   hasBonus: 0
   createBonus: 0
@@ -1043,13 +1044,29 @@ MonoBehaviour:
   - {fileID: 577515367533997611, guid: ff2326476e528dd4d87fbb739c9c61d4, type: 3}
   - {fileID: 9001359702967930928, guid: 5a22509370bd40f4fbe6814e608ebd6d, type: 3}
   - {fileID: 358304256966787040, guid: 4de3e0ea366e52b41aa71e47c688f0cf, type: 3}
-  - {fileID: 6739184345924420453, guid: 1da68305645e36048a45da9573bf60d4, type: 3}
+  - {fileID: 906002726140489702, guid: 1da68305645e36048a45da9573bf60d4, type: 3}
   - {fileID: 5110673404484545755, guid: 2a655f63cc840324a82c90fbf891163c, type: 3}
   - {fileID: 9001359702967930928, guid: 7a9efc87de242094b939dd7c91a326f4, type: 3}
   bonus: {fileID: 4556070806398121876, guid: df6bcff3400d66d48b03504271bcc612, type: 3}
   scoreText: {fileID: 56610172}
   wallList: []
   enemyBornTimeVal: 0
+  level_map:
+  - {fileID: 7415042980548552376, guid: eb3319c6b42e6bc48ad3c2a8badccd2f, type: 3}
+  - {fileID: 7415042980548552376, guid: 8481894eec07a854d99bde1ed46b7e30, type: 3}
+  - {fileID: 7415042980548552376, guid: 3e21b55f77f252a4faa9ecc6a743774a, type: 3}
+  - {fileID: 7415042980548552376, guid: 1a3527f2e774cb449a7539d326c8464a, type: 3}
+  - {fileID: 7415042980548552376, guid: 3bcf6f7448360634bb02f86d0e4ccc6e, type: 3}
+  - {fileID: 7415042980548552376, guid: 6e4ebb62b692ed2469557295f0a282e4, type: 3}
+  - {fileID: 7415042980548552376, guid: b5d5f98fd02a08c47ad0d69d94a73e1a, type: 3}
+  - {fileID: 7415042980548552376, guid: 2a1925133b922814394df859844d05bc, type: 3}
+  - {fileID: 7415042980548552376, guid: 1d9d184fe4ba42846bb58c1a1535bfa3, type: 3}
+  - {fileID: 7415042980548552376, guid: 1895617600a29dc42b9b1526097952a6, type: 3}
+  - {fileID: 7415042980548552376, guid: 6882255988bbee0428535a1d1b92e7cc, type: 3}
+  - {fileID: 7415042980548552376, guid: c2ec1550d85b78d469377a0b2cfbc58e, type: 3}
+  - {fileID: 7415042980548552376, guid: e27b1106d7ed9a94f8e75d75f9d2c7c7, type: 3}
+  - {fileID: 7415042980548552376, guid: 27df53bf62a8c2b409e58bbcd3eaa14b, type: 3}
+  - {fileID: 7415042980548552376, guid: 0621d77d3bcf34648a39d8f9edc71e5f, type: 3}
 --- !u!1 &1247441677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,8 +1732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633323795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2746, y: -0.2, z: 0}
-  m_LocalScale: {x: 6.364566, y: 6.117716, z: 1}
+  m_LocalPosition: {x: 0.2582, y: -0.1755, z: 0}
+  m_LocalScale: {x: 6.4142685, y: 6.1323986, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

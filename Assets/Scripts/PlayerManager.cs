@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public int enemy = 20;
     public bool isDead;
     public int enemyBornNum = 0;
+    public GameObject player;
     public List<GameObject> enemyAlive;
     public bool hasBonus;
     public bool createBonus;

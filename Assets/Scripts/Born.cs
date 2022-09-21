@@ -23,7 +23,7 @@ public class Born : MonoBehaviour
     private void BornTank()
     {
         if (isBornPlayer)
-            Instantiate(playerPrefab, transform.position, Quaternion.identity);
+            PlayerManager.Instance.player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         else
         {
             int num = Random.Range(0, 4);

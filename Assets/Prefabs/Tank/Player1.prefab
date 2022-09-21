@@ -245,6 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  x: 0
+  y: 0
   tankSprite:
   - {fileID: 21300000, guid: c3a4b3c783ddce7438622efbc82d5538, type: 3}
   - {fileID: 21300016, guid: c3a4b3c783ddce7438622efbc82d5538, type: 3}
@@ -280,7 +282,7 @@ MonoBehaviour:
   - {fileID: 21300062, guid: c3a4b3c783ddce7438622efbc82d5538, type: 3}
   changeSprite: 0
   changeSpriteTimeVal: 0
-  bulletPrefab: {fileID: 260553407898361683, guid: 0a4252e9874575f49a9123619513bf20, type: 3}
+  bulletPrefab: {fileID: 5643844831142279276, guid: 7746673ba9e81c04584746e526ee86de, type: 3}
   explodePrefab: {fileID: 5426620290605444033, guid: 7b6b63480b7815842bb101c0df3067bb, type: 3}
   shieldPrefab: {fileID: 492548193350195555}
   moveAudio: {fileID: 8709567021280498981}

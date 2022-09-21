@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public bool isHeavy;
     public int hitCount;
     private Vector3 bulletEulerAngles;
+    public int x;
+    public int y;
 
     public GameObject bulletPrefab;
     public GameObject explodePrefab;
@@ -26,7 +28,7 @@ public class Enemy : MonoBehaviour
     private bool upDisabled;
     private bool downDisabled;
     private bool leftDisabled;
-    private bool rightDisabled;
+    private bool rightDisabled; 
 
     public int score;
 
@@ -46,6 +48,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        x = Mathf.RoundToInt((transform.position.x + 8.8f) / 1.51f);
+        y = Mathf.RoundToInt((transform.position.y - 8.92f) / (-1.51f));
         if (PlayerManager.Instance.freeze)
         {
             if (PlayerManager.Instance.freezeTimeVal >= 20)
@@ -174,22 +178,22 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (index == 2 && collision.contacts[0].normal.y == 1)
+        if (index % 4 == 2 && collision.contacts[0].normal.y == 1)
         {
             downDisabled = true;
             changeDirTimeVal = 4;
         }
-        else if (index == 3 && collision.contacts[0].normal.x == 1)
+        else if (index % 4 == 3 && collision.contacts[0].normal.x == 1)
         {
             leftDisabled = true;
             changeDirTimeVal = 4;
         }
-        else if (index == 0 && collision.contacts[0].normal.y == -1)
+        else if (index % 4 == 0 && collision.contacts[0].normal.y == -1)
         {
             upDisabled = true;
             changeDirTimeVal = 4;
         }
-        else if (index == 1 && collision.contacts[0].normal.x == -1)
+        else if (index % 4 == 1 && collision.contacts[0].normal.x == -1)
         {
             rightDisabled = true;
             changeDirTimeVal = 4;
